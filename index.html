@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Clase</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Importación de Vue.js por CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <!-- HTML con renderización declarativa -->
+    <div id="app">
+        <div class="wrapper">
+            <h1>Presentación en el curso de Vue.js</h1>
+            <h2>Datos personales</h2>
+                <ul>
+                    <li>Nombre Completo: Sabrina Duarte </li>
+                    <li>Edad: 24 </li>
+                    <li>Lugar de procedencia:Córdoba Capital, Argentina</li>
+                    <li>Perfil de github:
+                        <a href="">https://github.com/SabriDuarte</a>
+                    </li>
+                </ul>
+            <h2>Experiencia con CSS</h2> 
+            <p :style="cssExperience.lenght < 50 ? `color: green`: `color: red`">
+                Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (selectores, operadores , estilos de texto, display, pseudoelementos y pseudoclases, media queries)
+            </p>
+            <h2>Experiencia con JS</h2>
+            <p :style="jsExperience.lenght < 50 ? `color: green`: `color: red`">
+                Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (operadores, condicionales, funciones, eventos)
+            </p>
+            <h2>Cursos</h2>
+            <ul>
+                <li>
+                    <b>Nombre del Curso: Desarrollo Web Fullstack  - Finaliza: Noviembre 2020</b>
+                </li>
+                <li>
+                    <b>Nombre del Curso: Vue.js - Finaliza: Enero 2021</b>
+                </li>
+            </ul>
+            <h3>Por el momento no tengo proyectos</h3>
+        </div>
+    </div>
+    <!-- / -->
+
+    <!-- Su JS aquí debajo por favor... -->
+    <script>
+        var app = new Vue({
+            el: '#app', // Este será el id de la tarjeta contenedora de nuestra App Vue.js
+            data: {
+
+                // Datos personales
+
+                nombre: 'Sabrina',
+                apellido: 'Duarte',
+                edad: 1996 ,
+                nacionalidad: 'Córdoba Capital, Argentina',
+                git:'https://github.com/SabriDuarte',
+
+                // ***AGREGAR VARIABLES***
+
+                // Otros datos
+
+                cssExperience: 'Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (selectores, operadores , estilos de texto, display, pseudoelementos y pseudoclases, media queries)', // Modíficá este texto
+                jsExperience: 'Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (operadores, condicionales, funciones, eventos)', // Modificá este texto
+
+                courses: 'Nombre del Curso: Desarrollo Web Fullstack  - Finaliza: Noviembre 2020',
+                courses2:'Nombre del Curso: Vue.js - Finaliza: Enero 2021',// Los objetos deberían tener una forma similar a {title: String, endDate: String}
+                projects: 'Por el momento no tengo proyectos', // Los objetos deberían tener una forma similar a {title: String, link: String}
+            }
+        })
+    </script>
+    <!-- / -->
+
+</body>
+</html>
