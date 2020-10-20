@@ -18,31 +18,31 @@
             <h1>Presentación en el curso de Vue.js</h1>
             <h2>Datos personales</h2>
                 <ul>
-                    <li>Nombre Completo: Sabrina Duarte </li>
-                    <li>Edad: 24 </li>
-                    <li>Lugar de procedencia:Córdoba Capital, Argentina</li>
+                    <li>Nombre Completo: {{`${nombre} ${apellido}`}} </li>
+                    <li>Edad:{{2020 - edad}} </li>
+                    <li>Lugar de procedencia: {{nacionalidad}}</li>
                     <li>Perfil de github:
-                        <a href="">https://github.com/SabriDuarte</a>
+                        <a href="">{{git}}</a>
                     </li>
                 </ul>
             <h2>Experiencia con CSS</h2> 
             <p :style="cssExperience.lenght < 50 ? `color: green`: `color: red`">
-                Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (selectores, operadores , estilos de texto, display, pseudoelementos y pseudoclases, media queries)
+                {{cssExperience}}
             </p>
             <h2>Experiencia con JS</h2>
             <p :style="jsExperience.lenght < 50 ? `color: green`: `color: red`">
-                Conocimientos adquiridos en el Curso Desarrollo Web Full Stack de Docta Devs (operadores, condicionales, funciones, eventos)
+                {{jsExperience}}
             </p>
             <h2>Cursos</h2>
             <ul>
                 <li>
-                    <b>Nombre del Curso: Desarrollo Web Fullstack  - Finaliza: Noviembre 2020</b>
+                    <b>{{courses}}</b>
                 </li>
                 <li>
-                    <b>Nombre del Curso: Vue.js - Finaliza: Enero 2021</b>
+                    <b>{{courses2}}</b>
                 </li>
             </ul>
-            <h3>Por el momento no tengo proyectos</h3>
+            <h3>{{projects}}</h3>
         </div>
     </div>
     <!-- / -->
